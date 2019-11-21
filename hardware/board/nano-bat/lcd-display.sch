@@ -5,11 +5,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 6
-Title ""
+Title "NanoBat"
 Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Rev "0.1.0"
+Comp "Vertigo Designs"
+Comment1 "Author: Ryan Summers"
 Comment2 ""
 Comment3 ""
 Comment4 ""

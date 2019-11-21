@@ -5,11 +5,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 6
-Title ""
+Title "NanoBat"
 Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Rev "0.1.0"
+Comp "Vertigo Designs"
+Comment1 "Author: Ryan Summers"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -21,9 +21,8 @@ F0 "Power" 50
 F1 "power.sch" 50
 F2 "Vin" I L 2750 1950 50 
 F3 "Vsoc" I R 4000 2050 50 
-F4 "Pgood" I R 4000 2700 50 
-F5 "Enable" I L 2750 2100 50 
-F6 "Vadj" I R 4000 2600 50 
+F4 "Pgood" I R 4000 2800 50 
+F5 "Vadj" I R 4000 2650 50 
 $EndSheet
 $Sheet
 S 6950 1450 1450 1550
@@ -359,7 +358,7 @@ F0 "Microcontroller" 50
 F1 "controller.sch" 50
 F2 "USB_DP" I L 4550 3950 50 
 F3 "USB_DM" I L 4550 4050 50 
-F4 "Vadj" I L 4550 2600 50 
+F4 "Vadj" I L 4550 2650 50 
 F5 "LCD-TFT_DB" I R 6350 5100 50 
 F6 "LCD_RS" I R 6350 5200 50 
 F7 "LCD_R~W" I R 6350 5300 50 
@@ -378,11 +377,11 @@ F19 "TFT_RGB_DOTCLK" I R 6350 4400 50
 F20 "TFT_RGB_HSYNC" I R 6350 4500 50 
 F21 "TFT_RGB_VSYNC" I R 6350 4600 50 
 F22 "TFT_RST" I R 6350 4000 50 
-F23 "Vsoc" I L 4550 2700 50 
+F23 "Vsoc" I L 4550 2500 50 
 F24 "Pgood" I L 4550 2800 50 
 $EndSheet
 Wire Wire Line
-	4000 2600 4550 2600
+	4000 2650 4550 2650
 Wire Wire Line
 	2250 1950 2750 1950
 Wire Wire Line
@@ -392,7 +391,7 @@ Wire Wire Line
 Wire Wire Line
 	6350 2800 6950 2800
 Wire Wire Line
-	4000 2050 5000 2050
+	4000 2050 4250 2050
 Wire Wire Line
 	5150 1800 6950 1800
 Wire Wire Line
@@ -407,4 +406,13 @@ Text Notes 8950 2300 0    50   ~ 0
 TODO: Add optional JST connector here
 Wire Wire Line
 	8400 1800 9300 1800
+Wire Wire Line
+	4550 2500 4250 2500
+Wire Wire Line
+	4250 2500 4250 2050
+Connection ~ 4250 2050
+Wire Wire Line
+	4250 2050 5000 2050
+Wire Wire Line
+	4550 2800 4000 2800
 $EndSCHEMATC

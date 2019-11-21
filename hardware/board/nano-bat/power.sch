@@ -5,11 +5,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 6
-Title ""
+Title "NanoBat"
 Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Rev "0.1.0"
+Comp "Vertigo Designs"
+Comment1 "Author: Ryan Summers"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -411,8 +411,6 @@ Wire Wire Line
 Connection ~ 6800 2850
 Text HLabel 1550 3250 0    50   Input ~ 0
 Pgood
-Text HLabel 1550 3050 0    50   Input ~ 0
-Enable
 Wire Wire Line
 	2100 2850 2100 3450
 Wire Wire Line
@@ -541,7 +539,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 5550 1800 5550
 Wire Wire Line
-	1800 5550 1800 1700
+	1800 5550 1800 3050
 Connection ~ 2250 5550
 Connection ~ 1800 1700
 Wire Wire Line
@@ -550,8 +548,6 @@ Wire Wire Line
 	1550 4200 1950 4200
 Wire Wire Line
 	1550 3250 2500 3250
-Wire Wire Line
-	1550 3050 2500 3050
 Wire Wire Line
 	1550 1700 1800 1700
 $Comp
@@ -568,4 +564,9 @@ $EndComp
 Wire Wire Line
 	3200 5500 3200 5550
 Connection ~ 3200 5550
+Wire Wire Line
+	1800 3050 2500 3050
+Connection ~ 1800 3050
+Wire Wire Line
+	1800 3050 1800 1700
 $EndSCHEMATC
