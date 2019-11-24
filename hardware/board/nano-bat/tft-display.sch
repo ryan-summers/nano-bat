@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 3 5
 Title "NanoBat"
 Date ""
 Rev "0.1.0"
@@ -19,7 +19,7 @@ L Connector_Generic:Conn_2Rows-45Pins J?
 U 1 1 5E7D047E
 P 5300 3850
 F 0 "J?" H 5350 5167 50  0000 C CNN
-F 1 "Conn_2Rows-45Pins" H 5350 5076 50  0000 C CNN
+F 1 "Conn_2Rows-45Pins" H 5350 5076 50  0001 C CNN
 F 2 "" H 5300 3850 50  0001 C CNN
 F 3 "~" H 5300 3850 50  0001 C CNN
 	1    5300 3850
@@ -36,22 +36,8 @@ Text Label 5000 2850 2    50   ~ 0
 IM1
 Text Label 5000 2950 2    50   ~ 0
 IM3
-Text Label 5000 3050 2    50   ~ 0
-VSYNC
-Text Label 5000 3150 2    50   ~ 0
-DOTCLK
-Text Label 5700 3150 0    50   ~ 0
-ENABLE
-Text Label 5000 4150 2    50   ~ 0
-SDO
-Text Label 5000 4250 2    50   ~ 0
-RD
-Text Label 5000 4350 2    50   ~ 0
-WR
-Text Label 5000 4450 2    50   ~ 0
+Text Label 4950 4450 2    50   ~ 0
 FMARK
-Text Label 5000 4550 2    50   ~ 0
-VCC
 $Comp
 L power:GND #PWR?
 U 1 1 5E7D3FEB
@@ -72,29 +58,9 @@ LED_K
 Wire Wire Line
 	5100 4750 4950 4750
 Wire Wire Line
-	5100 4550 5000 4550
-Wire Wire Line
-	5100 4450 5000 4450
-Wire Wire Line
-	5100 4350 5000 4350
-Wire Wire Line
-	5100 4250 5000 4250
-Wire Wire Line
-	5100 4150 5000 4150
-Text Label 5700 2850 0    50   ~ 0
+	5100 4550 5050 4550
+Text Label 5750 2850 0    50   ~ 0
 IM2
-Text Label 5700 2950 0    50   ~ 0
-RESET
-Text Label 5700 3050 0    50   ~ 0
-HSYNC
-Text Label 5700 4150 0    50   ~ 0
-SDI
-Text Label 5700 4250 0    50   ~ 0
-RS_SCL
-Text Label 5700 4350 0    50   ~ 0
-~CS
-Text Label 5700 4450 0    50   ~ 0
-VCC
 $Comp
 L power:GND #PWR?
 U 1 1 5E7D5AE2
@@ -115,101 +81,384 @@ LED_A
 Wire Wire Line
 	5750 4650 5600 4650
 Wire Wire Line
-	5700 4450 5600 4450
-Wire Wire Line
-	5700 4350 5600 4350
-Wire Wire Line
-	5700 4250 5600 4250
-Wire Wire Line
-	5700 4150 5600 4150
-Text Label 5000 3250 2    50   ~ 0
-DB17
-Text Label 5000 3350 2    50   ~ 0
-DB15
-Text Label 5000 3450 2    50   ~ 0
-DB13
-Text Label 5000 3550 2    50   ~ 0
-DB11
-Text Label 5000 3650 2    50   ~ 0
-DB9
-Text Label 5000 3750 2    50   ~ 0
-DB7
-Text Label 5000 3850 2    50   ~ 0
-DB5
-Text Label 5000 3950 2    50   ~ 0
-DB3
-Text Label 5000 4050 2    50   ~ 0
-DB1
-Text Label 5700 3250 0    50   ~ 0
-DB16
-Text Label 5700 3350 0    50   ~ 0
-DB14
-Text Label 5700 3450 0    50   ~ 0
-DB12
-Text Label 5700 3550 0    50   ~ 0
-DB10
-Text Label 5700 3650 0    50   ~ 0
-DB8
-Text Label 5700 3750 0    50   ~ 0
-DB6
-Text Label 5700 3850 0    50   ~ 0
-DB4
-Text Label 5700 3950 0    50   ~ 0
-DB2
-Text Label 5700 4050 0    50   ~ 0
-DB0
-Wire Wire Line
-	5700 4050 5600 4050
-Wire Wire Line
-	5700 3950 5600 3950
-Wire Wire Line
-	5700 3850 5600 3850
-Wire Wire Line
-	5700 3750 5600 3750
-Wire Wire Line
-	5700 3650 5600 3650
-Wire Wire Line
-	5700 3550 5600 3550
-Wire Wire Line
-	5700 3450 5600 3450
-Wire Wire Line
-	5700 3350 5600 3350
-Wire Wire Line
-	5700 3250 5600 3250
-Wire Wire Line
-	5700 3150 5600 3150
-Wire Wire Line
-	5700 3050 5600 3050
-Wire Wire Line
-	5700 2950 5600 2950
-Wire Wire Line
-	5700 2850 5600 2850
-Wire Wire Line
 	5700 2750 5600 2750
 Wire Wire Line
-	5000 2850 5100 2850
+	5000 2850 5050 2850
 Wire Wire Line
-	5000 2950 5100 2950
+	5000 2950 5050 2950
+$Comp
+L nano-bat:AP3032 U?
+U 1 1 5DD94950
+P 2450 6100
+F 0 "U?" H 2700 6265 50  0000 C CNN
+F 1 "AP3032" H 2700 6174 50  0000 C CNN
+F 2 "" H 2450 6100 50  0001 C CNN
+F 3 "" H 2450 6100 50  0001 C CNN
+	1    2450 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 5DD95193
+P 2700 5850
+F 0 "L?" V 2890 5850 50  0000 C CNN
+F 1 "6.8u" V 2799 5850 50  0000 C CNN
+F 2 "" H 2700 5850 50  0001 C CNN
+F 3 "~" H 2700 5850 50  0001 C CNN
+	1    2700 5850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Schottky D?
+U 1 1 5DD95C27
+P 3400 5850
+F 0 "D?" H 3400 5634 50  0000 C CNN
+F 1 "D_Schottky" H 3400 5725 50  0000 C CNN
+F 2 "" H 3400 5850 50  0001 C CNN
+F 3 "~" H 3400 5850 50  0001 C CNN
+	1    3400 5850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DD963C2
+P 1800 6100
+F 0 "C?" H 1915 6146 50  0000 L CNN
+F 1 "4.7u" H 1915 6055 50  0000 L CNN
+F 2 "" H 1838 5950 50  0001 C CNN
+F 3 "~" H 1800 6100 50  0001 C CNN
+	1    1800 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DD9677E
+P 4050 6100
+F 0 "C?" H 4165 6146 50  0000 L CNN
+F 1 "1u" H 4165 6055 50  0000 L CNN
+F 2 "" H 4088 5950 50  0001 C CNN
+F 3 "~" H 4050 6100 50  0001 C CNN
+	1    4050 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5DD97746
+P 3200 6850
+F 0 "R?" H 3268 6896 50  0000 L CNN
+F 1 "10" H 3268 6805 50  0000 L CNN
+F 2 "" V 3240 6840 50  0001 C CNN
+F 3 "~" H 3200 6850 50  0001 C CNN
+	1    3200 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DD97D27
+P 2700 6850
+F 0 "#PWR?" H 2700 6600 50  0001 C CNN
+F 1 "GND" H 2705 6677 50  0000 C CNN
+F 2 "" H 2700 6850 50  0001 C CNN
+F 3 "" H 2700 6850 50  0001 C CNN
+	1    2700 6850
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	5000 3050 5100 3050
+	2700 6850 2700 6800
 Wire Wire Line
-	5000 3150 5100 3150
+	2300 6200 2150 6200
 Wire Wire Line
-	5000 3250 5100 3250
+	2150 6200 2150 5850
 Wire Wire Line
-	5000 3350 5100 3350
+	2150 5850 2550 5850
 Wire Wire Line
-	5000 3450 5100 3450
+	3100 6200 3150 6200
 Wire Wire Line
-	5000 3550 5100 3550
+	3150 6200 3150 5850
 Wire Wire Line
-	5000 3650 5100 3650
+	3150 5850 3250 5850
 Wire Wire Line
-	5000 3750 5100 3750
+	3150 5850 2850 5850
+Connection ~ 3150 5850
 Wire Wire Line
-	5000 3850 5100 3850
+	3650 5850 3550 5850
+Wire Wire Line
+	3100 6400 3650 6400
+Wire Wire Line
+	3100 6600 3200 6600
+Wire Wire Line
+	3200 6600 3200 6700
+$Comp
+L power:GND #PWR?
+U 1 1 5DDAA113
+P 3200 7100
+F 0 "#PWR?" H 3200 6850 50  0001 C CNN
+F 1 "GND" H 3205 6927 50  0000 C CNN
+F 2 "" H 3200 7100 50  0001 C CNN
+F 3 "" H 3200 7100 50  0001 C CNN
+	1    3200 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 7100 3200 7000
+Connection ~ 3200 6600
+Wire Wire Line
+	4050 5950 4050 5850
+Wire Wire Line
+	4050 5850 3650 5850
+Connection ~ 3650 5850
+Text Label 4150 6600 0    50   ~ 0
+LED_K
+$Comp
+L power:GND #PWR?
+U 1 1 5DDB0FA1
+P 4050 6300
+F 0 "#PWR?" H 4050 6050 50  0001 C CNN
+F 1 "GND" H 4055 6127 50  0000 C CNN
+F 2 "" H 4050 6300 50  0001 C CNN
+F 3 "" H 4050 6300 50  0001 C CNN
+	1    4050 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 6300 4050 6250
+Text HLabel 2250 6400 0    50   Input ~ 0
+BL_CNTRL
+$Comp
+L power:GND #PWR?
+U 1 1 5DDB5E68
+P 1800 6600
+F 0 "#PWR?" H 1800 6350 50  0001 C CNN
+F 1 "GND" H 1805 6427 50  0000 C CNN
+F 2 "" H 1800 6600 50  0001 C CNN
+F 3 "" H 1800 6600 50  0001 C CNN
+	1    1800 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 5950 1800 5850
+Wire Wire Line
+	1800 5850 2150 5850
+Connection ~ 2150 5850
+Wire Wire Line
+	1800 6250 1800 6600
+Wire Wire Line
+	2250 6400 2300 6400
+Text Label 4150 5850 0    50   ~ 0
+LED_A
+Wire Wire Line
+	4150 5850 4050 5850
+Connection ~ 4050 5850
+Wire Wire Line
+	3200 6600 4150 6600
+Wire Wire Line
+	3650 5850 3650 6400
+Wire Wire Line
+	1800 5750 1800 5850
+Connection ~ 1800 5850
+Wire Wire Line
+	5600 4050 5700 4050
+Wire Wire Line
+	5600 3950 5700 3950
+Wire Wire Line
+	5600 3850 5700 3850
+Wire Wire Line
+	5600 3750 5700 3750
+Text HLabel 4600 4150 0    50   Input ~ 0
+SDO
+Text HLabel 5950 4150 2    50   Input ~ 0
+SDI
+Text HLabel 5950 4350 2    50   Input ~ 0
+~CS
+Text HLabel 5950 4250 2    50   Input ~ 0
+SCL
+Text HLabel 5750 2950 2    50   Input ~ 0
+RESET
+Wire Wire Line
+	5600 3050 5700 3050
+Wire Wire Line
+	5600 3150 5700 3150
+Wire Wire Line
+	4600 4150 5100 4150
+Wire Wire Line
+	5600 4150 5950 4150
+Wire Wire Line
+	5600 4250 5950 4250
+Wire Wire Line
+	5600 4350 5950 4350
+$Comp
+L power:+2V8 #PWR?
+U 1 1 5DE846E3
+P 5050 2500
+F 0 "#PWR?" H 5050 2350 50  0001 C CNN
+F 1 "+2V8" H 5065 2673 50  0000 C CNN
+F 2 "" H 5050 2500 50  0001 C CNN
+F 3 "" H 5050 2500 50  0001 C CNN
+	1    5050 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+2V8 #PWR?
+U 1 1 5DE85D21
+P 5650 2500
+F 0 "#PWR?" H 5650 2350 50  0001 C CNN
+F 1 "+2V8" H 5665 2673 50  0000 C CNN
+F 2 "" H 5650 2500 50  0001 C CNN
+F 3 "" H 5650 2500 50  0001 C CNN
+	1    5650 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2500 5050 2850
+Wire Wire Line
+	5650 4450 5600 4450
+$Comp
+L power:+2V8 #PWR?
+U 1 1 5DE8A976
+P 1800 5750
+F 0 "#PWR?" H 1800 5600 50  0001 C CNN
+F 1 "+2V8" H 1815 5923 50  0000 C CNN
+F 2 "" H 1800 5750 50  0001 C CNN
+F 3 "" H 1800 5750 50  0001 C CNN
+	1    1800 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2500 5650 2850
+Wire Wire Line
+	4950 4450 5100 4450
+Wire Wire Line
+	5000 4650 5000 4050
+Connection ~ 5000 4650
+Connection ~ 5000 4050
+Wire Wire Line
+	5000 4050 5100 4050
+Wire Wire Line
+	5000 4050 5000 3950
+Connection ~ 5000 3950
 Wire Wire Line
 	5000 3950 5100 3950
 Wire Wire Line
-	5000 4050 5100 4050
+	5000 3950 5000 3850
+Connection ~ 5000 3850
+Wire Wire Line
+	5000 3850 5100 3850
+Wire Wire Line
+	5000 3850 5000 3750
+Connection ~ 5000 3750
+Wire Wire Line
+	5000 3750 5100 3750
+Wire Wire Line
+	5000 3750 5000 3650
+Wire Wire Line
+	5000 3650 5100 3650
+Wire Wire Line
+	5000 3650 5000 3550
+Wire Wire Line
+	5000 3550 5100 3550
+Connection ~ 5000 3650
+Wire Wire Line
+	5000 3550 5000 3450
+Wire Wire Line
+	5000 3450 5100 3450
+Connection ~ 5000 3550
+Wire Wire Line
+	5000 3450 5000 3350
+Wire Wire Line
+	5000 3350 5100 3350
+Connection ~ 5000 3450
+Wire Wire Line
+	5000 3350 5000 3250
+Wire Wire Line
+	5000 3250 5100 3250
+Connection ~ 5000 3350
+Wire Wire Line
+	5700 4550 5700 4050
+Connection ~ 5700 4550
+Connection ~ 5700 4050
+Wire Wire Line
+	5700 4050 5700 3950
+Connection ~ 5700 3950
+Wire Wire Line
+	5700 3950 5700 3850
+Connection ~ 5700 3850
+Wire Wire Line
+	5700 3850 5700 3750
+Connection ~ 5700 3750
+Wire Wire Line
+	5700 3750 5700 3650
+Wire Wire Line
+	5700 3650 5600 3650
+Wire Wire Line
+	5700 3650 5700 3550
+Wire Wire Line
+	5700 3550 5600 3550
+Connection ~ 5700 3650
+Wire Wire Line
+	5700 3550 5700 3450
+Wire Wire Line
+	5700 3450 5600 3450
+Connection ~ 5700 3550
+Wire Wire Line
+	5700 3450 5700 3350
+Wire Wire Line
+	5700 3350 5600 3350
+Connection ~ 5700 3450
+Wire Wire Line
+	5700 3350 5700 3250
+Wire Wire Line
+	5700 3250 5600 3250
+Connection ~ 5700 3350
+Connection ~ 5050 2850
+Wire Wire Line
+	5050 2850 5100 2850
+Wire Wire Line
+	5050 2850 5050 2950
+Connection ~ 5050 2950
+Wire Wire Line
+	5050 2950 5100 2950
+Wire Wire Line
+	5050 2950 5050 4250
+Connection ~ 5650 2850
+Wire Wire Line
+	5650 2850 5600 2850
+Wire Wire Line
+	5650 2850 5650 4450
+Connection ~ 5700 3250
+Wire Wire Line
+	5700 2750 5700 2850
+Wire Wire Line
+	5700 2850 5700 3050
+Wire Wire Line
+	5650 2850 5750 2850
+Connection ~ 5050 4250
+Wire Wire Line
+	5050 4250 5100 4250
+Wire Wire Line
+	5050 4250 5050 4350
+Wire Wire Line
+	5050 4350 5050 4550
+Wire Wire Line
+	5000 3250 5000 3150
+Connection ~ 5000 3250
+Connection ~ 5000 3150
+Wire Wire Line
+	5000 3150 5100 3150
+Wire Wire Line
+	5000 3150 5000 3050
+Wire Wire Line
+	5000 3050 5100 3050
+Connection ~ 5700 3050
+Wire Wire Line
+	5700 3050 5700 3150
+Connection ~ 5700 3150
+Wire Wire Line
+	5700 3150 5700 3250
+NoConn ~ 4950 4450
+Wire Wire Line
+	4600 4350 5100 4350
+Text HLabel 4600 4350 0    50   Input ~ 0
+D~CX
+Wire Wire Line
+	5750 2950 5600 2950
 $EndSCHEMATC

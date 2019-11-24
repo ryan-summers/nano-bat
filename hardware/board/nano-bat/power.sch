@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 6
+Sheet 2 5
 Title "NanoBat"
 Date ""
 Rev "0.1.0"
@@ -84,8 +84,8 @@ $Comp
 L Device:R_US R?
 U 1 1 5DD600C1
 P 4400 3450
-F 0 "R?" V 4195 3450 50  0000 C CNN
-F 1 "R_US" V 4286 3450 50  0000 C CNN
+F 0 "R?" V 4500 3400 50  0000 C CNN
+F 1 "R_US" V 4600 3450 50  0000 C CNN
 F 2 "" V 4440 3440 50  0001 C CNN
 F 3 "~" H 4400 3450 50  0001 C CNN
 	1    4400 3450
@@ -404,7 +404,7 @@ Wire Wire Line
 	6550 3300 6550 3250
 Wire Wire Line
 	6550 3250 6800 3250
-Text HLabel 7000 2850 2    50   Input ~ 0
+Text HLabel 7300 2850 2    50   Input ~ 0
 Vsoc
 Wire Wire Line
 	7000 2850 6800 2850
@@ -457,22 +457,11 @@ Wire Notes Line
 Wire Notes Line
 	6650 2750 6250 2750
 $Comp
-L Regulator_Linear:L78L33_SO8 U?
-U 1 1 5DDF2722
-P 2750 5550
-F 0 "U?" H 2750 5792 50  0000 C CNN
-F 1 "L78L33_SO8" H 2750 5701 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2850 5750 50  0001 C CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 2950 5550 50  0001 C CNN
-	1    2750 5550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C?
 U 1 1 5DDF31C7
 P 2250 5750
 F 0 "C?" H 2365 5796 50  0000 L CNN
-F 1 ".33u" H 2365 5705 50  0000 L CNN
+F 1 "1u" H 2365 5705 50  0000 L CNN
 F 2 "" H 2288 5600 50  0001 C CNN
 F 3 "~" H 2250 5750 50  0001 C CNN
 	1    2250 5750
@@ -483,7 +472,7 @@ L Device:C C?
 U 1 1 5DDF39C2
 P 3200 5750
 F 0 "C?" H 3315 5796 50  0000 L CNN
-F 1 ".1u" H 3315 5705 50  0000 L CNN
+F 1 "1u" H 3315 5705 50  0000 L CNN
 F 2 "" H 3238 5600 50  0001 C CNN
 F 3 "~" H 3200 5750 50  0001 C CNN
 	1    3200 5750
@@ -550,17 +539,6 @@ Wire Wire Line
 	1550 3250 2500 3250
 Wire Wire Line
 	1550 1700 1800 1700
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5DE15BA9
-P 3200 5500
-F 0 "#PWR?" H 3200 5350 50  0001 C CNN
-F 1 "+3.3V" H 3215 5673 50  0000 C CNN
-F 2 "" H 3200 5500 50  0001 C CNN
-F 3 "" H 3200 5500 50  0001 C CNN
-	1    3200 5500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3200 5500 3200 5550
 Connection ~ 3200 5550
@@ -569,4 +547,37 @@ Wire Wire Line
 Connection ~ 1800 3050
 Wire Wire Line
 	1800 3050 1800 1700
+$Comp
+L Device:Ferrite_Bead FB?
+U 1 1 5DDC9F96
+P 7150 2850
+F 0 "FB?" V 6876 2850 50  0000 C CNN
+F 1 "Ferrite_Bead" V 6967 2850 50  0000 C CNN
+F 2 "" V 7080 2850 50  0001 C CNN
+F 3 "~" H 7150 2850 50  0001 C CNN
+	1    7150 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Regulator_Linear:MCP1703A-2802_SOT23 U?
+U 1 1 5DDCE1EA
+P 2750 5550
+F 0 "U?" H 2750 5792 50  0000 C CNN
+F 1 "MCP1702" H 2750 5701 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2750 5750 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf" H 2750 5500 50  0001 C CNN
+	1    2750 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+2V8 #PWR?
+U 1 1 5DDCF7B0
+P 3200 5500
+F 0 "#PWR?" H 3200 5350 50  0001 C CNN
+F 1 "+2V8" H 3215 5673 50  0000 C CNN
+F 2 "" H 3200 5500 50  0001 C CNN
+F 3 "" H 3200 5500 50  0001 C CNN
+	1    3200 5500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

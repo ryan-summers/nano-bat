@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 4 5
 Title "NanoBat"
 Date ""
 Rev "0.1.0"
@@ -83,46 +83,46 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5DE1DE5A
-P 3150 6600
-F 0 "#PWR?" H 3150 6350 50  0001 C CNN
-F 1 "GND" H 3155 6427 50  0000 C CNN
-F 2 "" H 3150 6600 50  0001 C CNN
-F 3 "" H 3150 6600 50  0001 C CNN
-	1    3150 6600
+P 2100 5900
+F 0 "#PWR?" H 2100 5650 50  0001 C CNN
+F 1 "GND" H 2105 5727 50  0000 C CNN
+F 2 "" H 2100 5900 50  0001 C CNN
+F 3 "" H 2100 5900 50  0001 C CNN
+	1    2100 5900
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GNDREF #PWR?
 U 1 1 5DE1E7D6
-P 3550 6600
-F 0 "#PWR?" H 3550 6350 50  0001 C CNN
-F 1 "GNDREF" H 3555 6427 50  0000 C CNN
-F 2 "" H 3550 6600 50  0001 C CNN
-F 3 "" H 3550 6600 50  0001 C CNN
-	1    3550 6600
+P 2500 5900
+F 0 "#PWR?" H 2500 5650 50  0001 C CNN
+F 1 "GNDREF" H 2505 5727 50  0000 C CNN
+F 2 "" H 2500 5900 50  0001 C CNN
+F 3 "" H 2500 5900 50  0001 C CNN
+	1    2500 5900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3550 6600 3550 6450
+	2500 5900 2500 5750
 Wire Wire Line
-	3450 6450 3450 6550
+	2400 5750 2400 5850
 Wire Wire Line
-	3450 6550 3350 6550
+	2400 5850 2300 5850
 Wire Wire Line
-	3150 6550 3150 6600
+	2100 5850 2100 5900
 Wire Wire Line
-	3150 6550 3150 6450
-Connection ~ 3150 6550
+	2100 5850 2100 5750
+Connection ~ 2100 5850
 Wire Wire Line
-	3250 6550 3250 6450
-Connection ~ 3250 6550
+	2200 5850 2200 5750
+Connection ~ 2200 5850
 Wire Wire Line
-	3250 6550 3150 6550
+	2200 5850 2100 5850
 Wire Wire Line
-	3350 6550 3350 6450
-Connection ~ 3350 6550
+	2300 5850 2300 5750
+Connection ~ 2300 5850
 Wire Wire Line
-	3350 6550 3250 6550
+	2300 5850 2200 5850
 $Comp
 L Device:C C?
 U 1 1 5DE1F99B
@@ -163,23 +163,23 @@ Wire Wire Line
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5DE2443A
-P 3050 2450
-F 0 "#PWR?" H 3050 2300 50  0001 C CNN
-F 1 "+3.3V" H 3065 2623 50  0000 C CNN
-F 2 "" H 3050 2450 50  0001 C CNN
-F 3 "" H 3050 2450 50  0001 C CNN
-	1    3050 2450
+P 1900 2450
+F 0 "#PWR?" H 1900 2300 50  0001 C CNN
+F 1 "+3.3V" H 1915 2623 50  0000 C CNN
+F 2 "" H 1900 2450 50  0001 C CNN
+F 3 "" H 1900 2450 50  0001 C CNN
+	1    1900 2450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Ferrite_Bead_Small FB?
 U 1 1 5DE25257
-P 3550 2650
-F 0 "FB?" H 3450 2650 50  0000 R CNN
-F 1 "Ferrite_Bead_Small" H 3450 2695 50  0001 R CNN
-F 2 "" V 3480 2650 50  0001 C CNN
-F 3 "~" H 3550 2650 50  0001 C CNN
-	1    3550 2650
+P 2400 2650
+F 0 "FB?" H 2300 2650 50  0000 R CNN
+F 1 "Ferrite_Bead_Small" H 2300 2695 50  0001 R CNN
+F 2 "" V 2330 2650 50  0001 C CNN
+F 3 "~" H 2400 2650 50  0001 C CNN
+	1    2400 2650
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -243,45 +243,43 @@ Wire Wire Line
 	10700 3450 10700 3550
 Connection ~ 10700 3550
 Wire Wire Line
-	3050 2450 3050 2500
+	1900 2450 1900 2500
 Wire Wire Line
-	3150 2500 3250 2500
+	2400 2550 2400 2500
+Connection ~ 2400 2500
 Wire Wire Line
-	3550 2550 3550 2500
-Connection ~ 3550 2500
+	2400 2500 2500 2500
+Connection ~ 2300 2500
 Wire Wire Line
-	3550 2500 3650 2500
-Connection ~ 3450 2500
+	2300 2500 2400 2500
+Connection ~ 2200 2500
 Wire Wire Line
-	3450 2500 3550 2500
-Connection ~ 3350 2500
+	2200 2500 2300 2500
+Connection ~ 2100 2500
 Wire Wire Line
-	3350 2500 3450 2500
-Connection ~ 3250 2500
+	2100 2500 2200 2500
 Wire Wire Line
-	3250 2500 3350 2500
+	2500 2500 2500 2850
 Wire Wire Line
-	3650 2500 3650 2850
+	2300 2500 2300 2850
 Wire Wire Line
-	3450 2500 3450 2850
+	2200 2500 2200 2850
 Wire Wire Line
-	3350 2500 3350 2850
+	2100 2500 2100 2850
 Wire Wire Line
-	3250 2500 3250 2850
-Wire Wire Line
-	3550 2750 3550 2800
+	2400 2750 2400 2800
 Text Label 8950 3400 0    50   ~ 0
 VDDA
 Wire Wire Line
 	8950 3400 8950 3500
 Connection ~ 8950 3500
-Text Label 3700 2800 0    50   ~ 0
+Text Label 2550 2800 0    50   ~ 0
 VDDA
 Wire Wire Line
-	3700 2800 3550 2800
-Connection ~ 3550 2800
+	2550 2800 2400 2800
+Connection ~ 2400 2800
 Wire Wire Line
-	3550 2800 3550 2850
+	2400 2800 2400 2850
 $Comp
 L power:GNDREF #PWR?
 U 1 1 5DE6125B
@@ -374,54 +372,54 @@ DAC1_OUT1
 $Comp
 L Device:C C?
 U 1 1 5DE92CCB
-P 2300 3250
-F 0 "C?" H 2415 3296 50  0000 L CNN
-F 1 ".1u" H 2415 3205 50  0000 L CNN
-F 2 "" H 2338 3100 50  0001 C CNN
-F 3 "~" H 2300 3250 50  0001 C CNN
-	1    2300 3250
+P 1250 3250
+F 0 "C?" H 1365 3296 50  0000 L CNN
+F 1 ".1u" H 1365 3205 50  0000 L CNN
+F 2 "" H 1288 3100 50  0001 C CNN
+F 3 "~" H 1250 3250 50  0001 C CNN
+	1    1250 3250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2300 3100 2300 3050
+	1250 3100 1250 3050
 $Comp
 L power:GND #PWR?
 U 1 1 5DE954E0
-P 2300 3400
-F 0 "#PWR?" H 2300 3150 50  0001 C CNN
-F 1 "GND" H 2305 3227 50  0000 C CNN
-F 2 "" H 2300 3400 50  0001 C CNN
-F 3 "" H 2300 3400 50  0001 C CNN
-	1    2300 3400
+P 1250 3400
+F 0 "#PWR?" H 1250 3150 50  0001 C CNN
+F 1 "GND" H 1255 3227 50  0000 C CNN
+F 2 "" H 1250 3400 50  0001 C CNN
+F 3 "" H 1250 3400 50  0001 C CNN
+	1    1250 3400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_US R?
 U 1 1 5DE972ED
-P 2300 2850
-F 0 "R?" H 2368 2896 50  0000 L CNN
-F 1 "R_US" H 2368 2805 50  0000 L CNN
-F 2 "" V 2340 2840 50  0001 C CNN
-F 3 "~" H 2300 2850 50  0001 C CNN
-	1    2300 2850
+P 1250 2850
+F 0 "R?" H 1318 2896 50  0000 L CNN
+F 1 "R_US" H 1318 2805 50  0000 L CNN
+F 2 "" V 1290 2840 50  0001 C CNN
+F 3 "~" H 1250 2850 50  0001 C CNN
+	1    1250 2850
 	1    0    0    -1  
 $EndComp
-Connection ~ 2300 3050
+Connection ~ 1250 3050
 Wire Wire Line
-	2300 3000 2300 3050
+	1250 3000 1250 3050
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5DE9971C
-P 2300 2650
-F 0 "#PWR?" H 2300 2500 50  0001 C CNN
-F 1 "+3.3V" H 2315 2823 50  0000 C CNN
-F 2 "" H 2300 2650 50  0001 C CNN
-F 3 "" H 2300 2650 50  0001 C CNN
-	1    2300 2650
+P 1250 2650
+F 0 "#PWR?" H 1250 2500 50  0001 C CNN
+F 1 "+3.3V" H 1265 2823 50  0000 C CNN
+F 2 "" H 1250 2650 50  0001 C CNN
+F 3 "" H 1250 2650 50  0001 C CNN
+	1    1250 2650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2300 2650 2300 2700
+	1250 2650 1250 2700
 $Comp
 L power:+3.3V #PWR?
 U 1 1 5DE9B441
@@ -534,10 +532,10 @@ F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresigh
 	1    9050 1700
 	-1   0    0    -1  
 $EndComp
-Text Label 2200 3050 2    50   ~ 0
+Text Label 1150 3050 2    50   ~ 0
 ~RST
 Wire Wire Line
-	2200 3050 2300 3050
+	1150 3050 1250 3050
 Text Label 8450 1400 2    50   ~ 0
 ~RST
 Wire Wire Line
@@ -741,97 +739,20 @@ Wire Wire Line
 	5750 6350 5750 6300
 Wire Wire Line
 	2900 2000 2900 1450
-Entry Wire Line
-	2150 4950 2250 5050
-Entry Wire Line
-	2150 4850 2250 4950
-Text Label 2350 4750 0    50   ~ 0
-DB0
-Wire Wire Line
-	2250 4950 2750 4950
-Text Label 2350 4850 0    50   ~ 0
-DB1
-Text Label 2350 4950 0    50   ~ 0
-DB2
-Text Label 2350 5050 0    50   ~ 0
-DB3
-Text Label 2350 5150 0    50   ~ 0
-DB4
-Text Label 2350 5250 0    50   ~ 0
-DB5
-Text Label 2350 5350 0    50   ~ 0
-DB6
-Text Label 2350 5450 0    50   ~ 0
-DB7
-Wire Wire Line
-	2250 5050 2750 5050
-Entry Wire Line
-	2150 5050 2250 5150
-Entry Wire Line
-	2150 5150 2250 5250
-Entry Wire Line
-	2150 5350 2250 5450
-Wire Wire Line
-	2250 5450 2750 5450
-Wire Wire Line
-	2250 5350 2750 5350
-Wire Wire Line
-	2250 5150 2750 5150
-Text HLabel 1750 4600 0    50   Input ~ 0
-LCD-TFT_DB
-Wire Wire Line
-	2250 5250 2750 5250
-Wire Wire Line
-	2250 4850 2750 4850
-Wire Wire Line
-	2250 4750 2750 4750
-Entry Wire Line
-	2150 5250 2250 5350
-Text HLabel 1750 4700 0    50   Input ~ 0
-LCD_RS
-Text HLabel 1750 4800 0    50   Input ~ 0
-LCD_R~W
 Text HLabel 5750 4150 2    50   Input ~ 0
 USB_DM
-Text HLabel 4450 3850 2    50   Input ~ 0
-CC_~INT
-Text HLabel 4450 3950 2    50   Input ~ 0
-CC_POL
-Text HLabel 4450 4050 2    50   Input ~ 0
-CC_~SHDN
 Text HLabel 4600 6050 2    50   Input ~ 0
 TFT_SCK
 Text HLabel 4600 6150 2    50   Input ~ 0
 TFT_MISO
 Text HLabel 4600 6250 2    50   Input ~ 0
 TFT_MOSI
-Text HLabel 1750 5850 0    50   Input ~ 0
-TFT_RD
-Text HLabel 1750 5750 0    50   Input ~ 0
-TFT_WR
-Text HLabel 4350 4850 2    50   Input ~ 0
-TFT_RGB_EN
-Text HLabel 1750 5950 0    50   Input ~ 0
-TFT_RGB_HSYNC
-Text HLabel 1750 6050 0    50   Input ~ 0
-TFT_RGB_VSYNC
-Text HLabel 4350 4950 2    50   Input ~ 0
+Text HLabel 1500 4750 0    50   Input ~ 0
 TFT_RST
 Text HLabel 6550 2650 2    50   Input ~ 0
 Vsoc
 Text HLabel 4350 5150 2    50   Input ~ 0
 Pgood
-$Comp
-L MCU_ST_STM32L4:STM32L452RETx U?
-U 1 1 5E27CF08
-P 3450 4650
-F 0 "U?" H 2900 2900 50  0000 C CNN
-F 1 "STM32L452RETx" H 3400 4650 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 2850 2950 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00340549.pdf" H 3450 4650 50  0001 C CNN
-	1    3450 4650
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C?
 U 1 1 5DD76E01
@@ -853,11 +774,6 @@ Wire Wire Line
 Wire Wire Line
 	9450 4000 9750 4000
 Connection ~ 9750 4000
-Wire Wire Line
-	3150 2850 3150 2500
-Wire Wire Line
-	3150 2500 3050 2500
-Connection ~ 3150 2500
 Text Label 5350 4350 0    50   ~ 0
 SWDIO
 Text Label 5350 4450 0    50   ~ 0
@@ -874,8 +790,6 @@ Text Label 5350 4550 0    50   ~ 0
 SPI1_NSS
 Text HLabel 4600 5950 2    50   Input ~ 0
 TFT_~CS
-Text HLabel 1750 6150 0    50   Input ~ 0
-TFT_RGB_DOTCLK
 Wire Wire Line
 	4100 3550 4100 1250
 Connection ~ 4100 3550
@@ -939,55 +853,13 @@ Wire Wire Line
 	5250 3450 5350 3450
 Wire Wire Line
 	4050 3450 5100 3450
-Entry Wire Line
-	2150 4750 2250 4850
-Entry Wire Line
-	2150 4650 2250 4750
-Wire Wire Line
-	2050 5550 2050 4700
-Wire Wire Line
-	2050 5550 2750 5550
-Wire Wire Line
-	1950 4800 1950 5650
-Wire Wire Line
-	1950 5650 2750 5650
-Wire Wire Line
-	1750 4800 1950 4800
-Wire Wire Line
-	1750 4700 2050 4700
-Wire Bus Line
-	1750 4600 2150 4600
-Text HLabel 4350 4750 2    50   Input ~ 0
-LCD_EN
-Wire Wire Line
-	1750 5750 2750 5750
-Wire Wire Line
-	1750 5850 2750 5850
-Wire Wire Line
-	1750 5950 2750 5950
-Wire Wire Line
-	1750 6050 2750 6050
-Wire Wire Line
-	1750 6150 2750 6150
 Wire Wire Line
 	5350 5050 4900 5050
 Connection ~ 4900 5050
 Wire Wire Line
 	4050 4250 5750 4250
 Wire Wire Line
-	4450 3850 4050 3850
-Wire Wire Line
-	4450 3950 4050 3950
-Wire Wire Line
-	4450 4050 4050 4050
-Wire Wire Line
 	5750 4150 4050 4150
-Wire Wire Line
-	4350 4750 4050 4750
-Wire Wire Line
-	4050 4850 4350 4850
-Wire Wire Line
-	4350 4950 4050 4950
 Text Label 4650 6450 0    50   ~ 0
 SPI2_NSS
 Text Label 4650 6650 0    50   ~ 0
@@ -1151,7 +1023,7 @@ Connection ~ 5100 3450
 Wire Wire Line
 	5100 3450 5250 3450
 Wire Wire Line
-	2300 3050 2750 3050
+	1250 3050 1700 3050
 Wire Wire Line
 	4400 2000 4400 4550
 Wire Wire Line
@@ -1196,10 +1068,10 @@ Text Label 6250 5750 0    50   ~ 0
 BTN3
 Text Label 6600 5850 0    50   ~ 0
 BTN4
-Text Label 2450 4550 2    50   ~ 0
+Text Label 1300 4550 2    50   ~ 0
 PD2
 Wire Wire Line
-	2450 4550 2750 4550
+	1300 4550 1600 4550
 Text Label 9250 5350 2    50   ~ 0
 PD2
 Wire Wire Line
@@ -1293,10 +1165,6 @@ Text Label 7250 5950 2    50   ~ 0
 PB5
 Wire Wire Line
 	7250 5950 7250 5850
-Text Label 4150 5250 0    50   ~ 0
-PB5
-Wire Wire Line
-	4150 5250 4050 5250
 Wire Wire Line
 	8050 3750 8100 3750
 Wire Wire Line
@@ -1305,6 +1173,29 @@ Wire Wire Line
 	7800 3750 7800 4000
 Wire Wire Line
 	8100 3750 8100 4000
-Wire Bus Line
-	2150 4600 2150 5350
+Wire Wire Line
+	1500 4750 1600 4750
+Text HLabel 1500 7200 0    50   Input ~ 0
+TFT_BL_CNTRL
+Text HLabel 1500 7050 0    50   Input ~ 0
+CC_SDA
+Text HLabel 1500 6900 0    50   Input ~ 0
+CC_SCL
+Text HLabel 1500 6750 0    50   Input ~ 0
+CC_~AL~CC
+$Comp
+L MCU_ST_STM32L4:STM32L452CEUx U?
+U 1 1 5DDF5012
+P 2300 4250
+F 0 "U?" H 1850 5600 50  0000 C CNN
+F 1 "STM32L452CEUx" H 2450 4950 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm" H 1800 2850 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00340549.pdf" H 2300 4250 50  0001 C CNN
+	1    2300 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2500 2100 2500
+Text Label 3050 4450 0    50   ~ 0
+DAC1_OUT1
 $EndSCHEMATC
