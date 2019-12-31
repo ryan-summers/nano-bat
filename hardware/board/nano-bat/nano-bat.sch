@@ -33,6 +33,7 @@ F 0 "J101" H 1457 2925 50  0000 C CNN
 F 1 "Barrel_Jack_Switch" H 1457 2926 50  0001 C CNN
 F 2 "footprints:CUI_PJ-202B" H 1450 2660 50  0001 C CNN
 F 3 "~" H 1450 2660 50  0001 C CNN
+F 4 "CP-202B-ND" H 1400 2700 50  0001 C CNN "Part"
 	1    1400 2700
 	1    0    0    -1  
 $EndComp

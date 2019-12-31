@@ -364,8 +364,6 @@ Connection ~ 9800 2300
 Wire Wire Line
 	9800 2300 9800 2350
 NoConn ~ 9300 1850
-Text HLabel 6250 4450 2    50   Input ~ 0
-Vadj
 Text Label 10100 3550 2    50   ~ 0
 DAC1_OUT1
 Wire Wire Line
@@ -524,8 +522,6 @@ Text HLabel 6250 5050 2    50   Input ~ 0
 CC_SDA
 Text HLabel 6250 4950 2    50   Input ~ 0
 CC_SCL
-Text HLabel 6250 4050 2    50   Input ~ 0
-CC_~AL~CC
 $Comp
 L MCU_ST_STM32L4:STM32L452CEUx U302
 U 1 1 5DDF5012
@@ -598,7 +594,7 @@ Wire Wire Line
 Wire Wire Line
 	6150 1400 5800 1400
 Wire Wire Line
-	5600 4450 6250 4450
+	5600 4450 6150 4450
 Connection ~ 5700 1300
 Connection ~ 5800 1400
 Connection ~ 5900 1500
@@ -644,16 +640,7 @@ SPI1_NSS
 Wire Wire Line
 	6150 2050 6000 2050
 Connection ~ 6000 2050
-Wire Wire Line
-	6150 4050 5600 4050
-Wire Wire Line
-	6250 4050 6150 4050
-Connection ~ 6150 4050
-Wire Wire Line
-	6150 3900 6150 4050
-Wire Wire Line
-	6250 3900 6150 3900
-Text Label 6250 3900 0    50   ~ 0
+Text Label 6250 4600 0    50   ~ 0
 DAC1_OUT1
 Text Label 3500 4450 2    50   ~ 0
 BTN1
@@ -679,16 +666,12 @@ Wire Wire Line
 	3450 4000 3450 4250
 Wire Wire Line
 	3150 4000 3150 4150
-Text Label 6250 4850 0    50   ~ 0
-PA8
-Wire Wire Line
-	5600 4850 6250 4850
 Text Label 4250 4850 2    50   ~ 0
 PB8
 Text Label 10150 5250 2    50   ~ 0
-PA8
-Text Label 10150 5350 2    50   ~ 0
 PB8
+Text Label 10150 5350 2    50   ~ 0
+PB9
 Wire Wire Line
 	10150 5350 10400 5350
 Wire Wire Line
@@ -4177,4 +4160,93 @@ F 4 "399-3482-1-ND" H 6300 7100 50  0001 C CNN "Part"
 	1    6300 7100
 	1    0    0    -1  
 $EndComp
+Text HLabel 6250 4450 2    50   Input ~ 0
+Vadj
+Text HLabel 6250 4850 2    50   Input ~ 0
+CC_~AL~CC
+Wire Wire Line
+	6250 4600 6150 4600
+Wire Wire Line
+	6150 4600 6150 4450
+Connection ~ 6150 4450
+Wire Wire Line
+	6150 4450 6250 4450
+$Comp
+L Device:R_US R315
+U 1 1 5E695531
+P 6850 3850
+F 0 "R315" H 6918 3896 50  0000 L CNN
+F 1 "40.2k" H 6918 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6890 3840 50  0001 C CNN
+F 3 "~" H 6850 3850 50  0001 C CNN
+F 4 "RR08P40.2KDCT-ND" H 6850 3850 50  0001 C CNN "Part"
+	1    6850 3850
+	1    0    0    -1  
+$EndComp
+Text HLabel 6750 3550 0    50   Input ~ 0
+Vsoc
+$Comp
+L power:GNDREF #PWR0168
+U 1 1 5E6A65E6
+P 6850 4450
+F 0 "#PWR0168" H 6850 4200 50  0001 C CNN
+F 1 "GNDREF" H 6855 4277 50  0000 C CNN
+F 2 "" H 6850 4450 50  0001 C CNN
+F 3 "" H 6850 4450 50  0001 C CNN
+	1    6850 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4450 6850 4400
+Wire Wire Line
+	6750 3550 6850 3550
+Wire Wire Line
+	6850 3550 6850 3700
+Wire Wire Line
+	6850 4100 6850 4050
+Wire Wire Line
+	5600 4050 6850 4050
+Connection ~ 6850 4050
+Wire Wire Line
+	6850 4050 6850 4000
+Wire Wire Line
+	6250 4850 5600 4850
+Text Label 4250 4950 2    50   ~ 0
+PB9
+Wire Wire Line
+	4250 4950 4400 4950
+$Comp
+L Device:R_US R316
+U 1 1 5E72ACDB
+P 6850 4250
+F 0 "R316" H 6918 4296 50  0000 L CNN
+F 1 "10k" H 6918 4205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6890 4240 50  0001 C CNN
+F 3 "~" H 6850 4250 50  0001 C CNN
+F 4 "311-10KGRCT-ND" H 6850 4250 50  0001 C CNN "Part"
+	1    6850 4250
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 10350 3450
+$Comp
+L Connector:TestPoint TP301
+U 1 1 5E73C90B
+P 4100 2700
+F 0 "TP301" H 4158 2818 50  0000 L CNN
+F 1 "TestPoint" H 4158 2727 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 4300 2700 50  0001 C CNN
+F 3 "~" H 4300 2700 50  0001 C CNN
+	1    4100 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3450 4100 3450
+Wire Wire Line
+	4100 3450 4100 2700
+NoConn ~ 5600 5550
+NoConn ~ 4400 3350
+NoConn ~ 4400 3250
+NoConn ~ 4400 3650
+NoConn ~ 4400 3750
+NoConn ~ 4400 3850
 $EndSCHEMATC
