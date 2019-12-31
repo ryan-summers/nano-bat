@@ -3185,4 +3185,6 @@ F 4 "311-1.0KGRCT-ND" H 3500 2800 50  0001 C CNN "Part"
 	1    3500 2800
 	1    0    0    -1  
 $EndComp
+Text Notes 1350 2250 0    50   ~ 0
+When the barrel jack is powered, it will \noverride USB as the supply source and \nwill be used as the main system rail. If \nthe barrel-jack is not connected, USB\n power will be used.
 $EndSCHEMATC

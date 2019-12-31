@@ -2984,4 +2984,8 @@ F 4 "1276-1258-1-ND" H 5000 2450 50  0001 C CNN "Part"
 	1    5000 2450
 	-1   0    0    1   
 $EndComp
+Text Notes 4950 1650 0    50   ~ 0
+The sensitivity of the system may be selected by JP401.
+Text Notes 6700 2900 0    50   ~ 0
+Maximum Current Ranges:\n* 10 Ohms - 500mA\n* 1 Ohm - 50mA\n* 100 mOhm - 5mA
 $EndSCHEMATC

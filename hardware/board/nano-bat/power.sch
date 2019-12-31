@@ -182,7 +182,7 @@ $Comp
 L Regulator_Linear:MCP1703A-2802_SOT23 U502
 U 1 1 5DDCE1EA
 P 5400 5750
-F 0 "U502" H 5400 5992 50  0000 C CNN
+F 0 "U502" H 5550 5500 50  0000 C CNN
 F 1 "MCP1702" H 5400 5901 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5400 5950 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf" H 5400 5700 50  0001 C CNN
@@ -3462,4 +3462,12 @@ $EndComp
 Connection ~ 4450 3250
 Wire Wire Line
 	4450 3250 4450 4300
+Text Notes 7450 2550 0    50   ~ 0
+The MIC2104 is used as a programmable voltage \nsupply to emulate battery voltage. The supply is \na synchronous buck topology to allow the supply \nto both source and sink currents (such as during \nbattery charge cycles).
+Text Notes 8700 4400 0    50   ~ 0
+The MIC2104 requires appropriate voltage ripple \non the regulated output for a stable control loop. \nThe two outlined sections allow for optional \nripple-injection into the feedback loop and may \nnot be necessary.
+Text Notes 6050 5000 0    50   ~ 0
+The MIC2104 control loop regulates the FB node to 0.8 volts. \nBy applying an analog voltage to Vadj, the set-point of the \nregulator can be controlled programmatically by a \nmicrocontroller.
+Text Notes 2950 1900 0    50   ~ 0
+The MIC2104 provides a 5V LDO output on VDD that \ncan be shorted to PVDD to drive the power-switch \nMOSFET drivers. Under conditions where VIN is less \nthan 5.5V, the 5V LDO needs to be bypassed as it won't \nbe able to maintain regulation. A FET is used to connect \nVIN to VDD (and bypass the internal LDO) whenever \npower is not applied to the barrel-jack connector.
 $EndSCHEMATC
