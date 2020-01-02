@@ -276,15 +276,6 @@ Text Label 10100 3850 2    50   ~ 0
 SPI1_MISO
 Text Label 10100 3950 2    50   ~ 0
 SPI1_NSS
-Connection ~ 10200 3350
-Wire Wire Line
-	10200 4050 10350 4050
-Wire Wire Line
-	10200 3350 10200 4050
-Wire Wire Line
-	10200 3350 10350 3350
-Wire Wire Line
-	10200 3150 10200 3350
 Connection ~ 10300 4150
 Wire Wire Line
 	10300 3250 10350 3250
@@ -364,8 +355,6 @@ Connection ~ 9800 2300
 Wire Wire Line
 	9800 2300 9800 2350
 NoConn ~ 9300 1850
-Text Label 10100 3550 2    50   ~ 0
-DAC1_OUT1
 Wire Wire Line
 	10100 3550 10350 3550
 Wire Wire Line
@@ -582,7 +571,7 @@ Wire Wire Line
 Wire Wire Line
 	4300 4050 4400 4050
 Wire Wire Line
-	6250 4150 5600 4150
+	6250 4150 6150 4150
 Wire Wire Line
 	4200 2050 6000 2050
 Wire Wire Line
@@ -622,9 +611,9 @@ Wire Wire Line
 	3150 4000 3150 4150
 Text Label 4250 4850 2    50   ~ 0
 PB8
-Text Label 10150 5250 2    50   ~ 0
+Text Label 10100 4050 2    50   ~ 0
 PB8
-Text Label 10150 5350 2    50   ~ 0
+Text Label 10150 5250 2    50   ~ 0
 PB9
 Wire Wire Line
 	10150 5350 10400 5350
@@ -672,17 +661,6 @@ Wire Wire Line
 	7450 1550 7450 5450
 Wire Wire Line
 	7450 1550 9300 1550
-$Comp
-L power:+2V8 #PWR0130
-U 1 1 5E4DE792
-P 10200 3150
-F 0 "#PWR0130" H 10200 3000 50  0001 C CNN
-F 1 "+2V8" H 10215 3323 50  0000 C CNN
-F 2 "" H 10200 3150 50  0001 C CNN
-F 3 "" H 10200 3150 50  0001 C CNN
-	1    10200 3150
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+2V8 #PWR0131
 U 1 1 5E4DF04B
@@ -3676,13 +3654,13 @@ Wire Wire Line
 	2850 4400 2850 4750
 Connection ~ 2850 4750
 Wire Wire Line
-	3050 4750 2850 4750
+	3050 4750 2950 4750
 Wire Wire Line
 	900  4400 900  4450
 Wire Wire Line
 	1550 4400 1550 4550
 Wire Wire Line
-	4400 4450 900  4450
+	4400 4450 1000 4450
 Connection ~ 900  4450
 Wire Wire Line
 	900  4450 900  4750
@@ -3690,14 +3668,14 @@ Connection ~ 1550 4550
 Wire Wire Line
 	1550 4550 1550 4750
 Wire Wire Line
-	4400 4650 2200 4650
+	4400 4650 2300 4650
 Connection ~ 2200 4650
 Wire Wire Line
 	2200 4650 2200 4750
 Wire Wire Line
 	2200 4400 2200 4650
 Wire Wire Line
-	1550 4550 4400 4550
+	1550 4550 1650 4550
 Wire Wire Line
 	3050 4750 4400 4750
 Connection ~ 3050 4750
@@ -3903,8 +3881,8 @@ $Comp
 L Device:R_US R310
 U 1 1 5E485978
 P 3350 1100
-F 0 "R310" H 3418 1146 50  0000 L CNN
-F 1 "10k" H 3418 1055 50  0000 L CNN
+F 0 "R310" H 3150 1200 50  0000 L CNN
+F 1 "10k" H 3200 950 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 3390 1090 50  0001 C CNN
 F 3 "~" H 3350 1100 50  0001 C CNN
 F 4 "311-10KGRCT-ND" H 3350 1100 50  0001 C CNN "Part"
@@ -3912,23 +3890,11 @@ F 4 "311-10KGRCT-ND" H 3350 1100 50  0001 C CNN "Part"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R312
-U 1 1 5E494A9B
-P 3650 1100
-F 0 "R312" H 3550 1450 50  0000 L CNN
-F 1 "10k" H 3600 1350 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3690 1090 50  0001 C CNN
-F 3 "~" H 3650 1100 50  0001 C CNN
-F 4 "311-10KGRCT-ND" H 3650 1100 50  0001 C CNN "Part"
-	1    3650 1100
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:R_US R313
 U 1 1 5E4A3BBE
 P 3950 1100
-F 0 "R313" H 3700 1200 50  0000 L CNN
-F 1 "10k" H 3750 1100 50  0000 L CNN
+F 0 "R313" H 3750 1200 50  0000 L CNN
+F 1 "10k" H 3800 950 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 3990 1090 50  0001 C CNN
 F 3 "~" H 3950 1100 50  0001 C CNN
 F 4 "311-10KGRCT-ND" H 3950 1100 50  0001 C CNN "Part"
@@ -4139,7 +4105,7 @@ Connection ~ 6850 4050
 Wire Wire Line
 	6850 4050 6850 4000
 Wire Wire Line
-	6250 4850 5600 4850
+	6250 4850 6050 4850
 $Comp
 L Device:R_US R316
 U 1 1 5E72ACDB
@@ -4152,7 +4118,6 @@ F 4 "311-10KGRCT-ND" H 6850 4250 50  0001 C CNN "Part"
 	1    6850 4250
 	-1   0    0    -1  
 $EndComp
-NoConn ~ 10350 3450
 $Comp
 L Connector:TestPoint TP301
 U 1 1 5E73C90B
@@ -4192,7 +4157,7 @@ Wire Wire Line
 Wire Wire Line
 	3850 5150 4400 5150
 Wire Wire Line
-	3850 5050 4400 5050
+	3850 5050 3950 5050
 Wire Wire Line
 	4150 5550 4150 5900
 Text HLabel 3850 5050 0    50   Input ~ 0
@@ -4249,4 +4214,135 @@ Wire Wire Line
 	4350 6300 7250 6300
 Wire Wire Line
 	4350 4350 4350 6300
+Text Label 10100 3550 2    50   ~ 0
+DAC1_OUT1
+Text Label 10100 3450 2    50   ~ 0
+I2C1_SDA
+Text Label 10100 3350 2    50   ~ 0
+I2C1_SCL
+Wire Wire Line
+	10100 3350 10350 3350
+Wire Wire Line
+	10350 3450 10100 3450
+$Comp
+L Device:R_US R312
+U 1 1 5E494A9B
+P 3650 1100
+F 0 "R312" H 3450 1200 50  0000 L CNN
+F 1 "10k" H 3500 950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3690 1090 50  0001 C CNN
+F 3 "~" H 3650 1100 50  0001 C CNN
+F 4 "311-10KGRCT-ND" H 3650 1100 50  0001 C CNN "Part"
+	1    3650 1100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP302
+U 1 1 5E27D0B0
+P 1000 4350
+F 0 "TP302" H 1058 4422 50  0000 L CNN
+F 1 "TestPoint" H 1058 4377 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1200 4350 50  0001 C CNN
+F 3 "~" H 1200 4350 50  0001 C CNN
+	1    1000 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP303
+U 1 1 5E27D3EA
+P 1650 4350
+F 0 "TP303" H 1708 4422 50  0000 L CNN
+F 1 "TestPoint" H 1708 4377 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1850 4350 50  0001 C CNN
+F 3 "~" H 1850 4350 50  0001 C CNN
+	1    1650 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP304
+U 1 1 5E27D5E6
+P 2300 4350
+F 0 "TP304" H 2358 4422 50  0000 L CNN
+F 1 "TestPoint" H 2358 4377 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2500 4350 50  0001 C CNN
+F 3 "~" H 2500 4350 50  0001 C CNN
+	1    2300 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP305
+U 1 1 5E27D86D
+P 2950 4350
+F 0 "TP305" H 3008 4422 50  0000 L CNN
+F 1 "TestPoint" H 3008 4377 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3150 4350 50  0001 C CNN
+F 3 "~" H 3150 4350 50  0001 C CNN
+	1    2950 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 4350 2950 4750
+Connection ~ 2950 4750
+Wire Wire Line
+	2950 4750 2850 4750
+Wire Wire Line
+	2300 4350 2300 4650
+Connection ~ 2300 4650
+Wire Wire Line
+	2300 4650 2200 4650
+Wire Wire Line
+	1650 4350 1650 4550
+Connection ~ 1650 4550
+Wire Wire Line
+	1650 4550 4400 4550
+Wire Wire Line
+	1000 4350 1000 4450
+Connection ~ 1000 4450
+Wire Wire Line
+	1000 4450 900  4450
+Text Label 3850 4950 2    50   ~ 0
+TFT_D~CX
+Wire Wire Line
+	3850 4950 3950 4950
+Wire Wire Line
+	3950 4950 3950 5050
+Connection ~ 3950 5050
+Wire Wire Line
+	3950 5050 4400 5050
+Text Label 10150 5350 2    50   ~ 0
+TFT_D~CX
+Wire Wire Line
+	10100 4050 10350 4050
+$Comp
+L Connector:TestPoint TP306
+U 1 1 5E2F53FA
+P 6050 4800
+F 0 "TP306" H 6108 4872 50  0000 L CNN
+F 1 "TestPoint" H 6108 4827 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6250 4800 50  0001 C CNN
+F 3 "~" H 6250 4800 50  0001 C CNN
+	1    6050 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4800 6050 4850
+Connection ~ 6050 4850
+Wire Wire Line
+	6050 4850 5600 4850
+$Comp
+L Connector:TestPoint TP307
+U 1 1 5E307AB0
+P 6150 3950
+F 0 "TP307" H 6208 4022 50  0000 L CNN
+F 1 "TestPoint" H 6208 3977 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6350 3950 50  0001 C CNN
+F 3 "~" H 6350 3950 50  0001 C CNN
+	1    6150 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4150 6150 3950
+Connection ~ 6150 4150
+Wire Wire Line
+	6150 4150 5600 4150
 $EndSCHEMATC

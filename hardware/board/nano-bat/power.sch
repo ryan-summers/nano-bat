@@ -3049,7 +3049,7 @@ Wire Wire Line
 Wire Wire Line
 	7550 3650 7550 3600
 Wire Wire Line
-	7550 3650 6300 3650
+	7550 3650 6950 3650
 Connection ~ 7550 3650
 Wire Wire Line
 	8550 3600 8550 3650
@@ -3400,7 +3400,7 @@ F 4 "1276-1182-1-ND" H 4900 5950 50  0001 C CNN "Part"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8950 3000 9600 3000
+	8950 3000 9150 3000
 $Comp
 L power:GND #PWR0501
 U 1 1 5E5FAE7F
@@ -3470,4 +3470,62 @@ Text Notes 6050 5000 0    50   ~ 0
 The MIC2104 control loop regulates the FB node to 0.8 volts. \nBy applying an analog voltage to Vadj, the set-point of the \nregulator can be controlled programmatically by a \nmicrocontroller.
 Text Notes 2950 1900 0    50   ~ 0
 The MIC2104 provides a 5V LDO output on VDD that \ncan be shorted to PVDD to drive the power-switch \nMOSFET drivers. Under conditions where VIN is less \nthan 5.5V, the 5V LDO needs to be bypassed as it won't \nbe able to maintain regulation. A FET is used to connect \nVIN to VDD (and bypass the internal LDO) whenever \npower is not applied to the barrel-jack connector.
+$Comp
+L Device:Polyfuse F?
+U 1 1 5E1D5B5B
+P 9300 3000
+AR Path="/5E1D5B5B" Ref="F?"  Part="1" 
+AR Path="/5DD44E3C/5E1D5B5B" Ref="F501"  Part="1" 
+F 0 "F501" V 9200 2950 50  0000 C CNN
+F 1 "Polyfuse" V 9200 2950 50  0001 C CNN
+F 2 "Fuse:Fuse_1812_4532Metric" H 9350 2800 50  0001 L CNN
+F 3 "~" H 9300 3000 50  0001 C CNN
+F 4 "507-1763-1-ND" V 9300 3000 50  0001 C CNN "Part"
+	1    9300 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9450 3000 9600 3000
+$Comp
+L Connector:TestPoint TP501
+U 1 1 5E31CD10
+P 6950 3800
+F 0 "TP501" H 6892 3872 50  0000 R CNN
+F 1 "TestPoint" H 6892 3917 50  0001 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7150 3800 50  0001 C CNN
+F 3 "~" H 7150 3800 50  0001 C CNN
+	1    6950 3800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6950 3800 6950 3650
+Connection ~ 6950 3650
+Wire Wire Line
+	6950 3650 6300 3650
+$Comp
+L Connector:TestPoint TP502
+U 1 1 5E320F38
+P 7550 2850
+F 0 "TP502" H 7608 2922 50  0000 L CNN
+F 1 "TestPoint" H 7492 2967 50  0001 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7750 2850 50  0001 C CNN
+F 3 "~" H 7750 2850 50  0001 C CNN
+	1    7550 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 2850 7550 3000
+$Comp
+L Connector:TestPoint TP503
+U 1 1 5E324C2D
+P 8150 2850
+F 0 "TP503" H 8208 2922 50  0000 L CNN
+F 1 "TestPoint" H 8092 2967 50  0001 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 8350 2850 50  0001 C CNN
+F 3 "~" H 8350 2850 50  0001 C CNN
+	1    8150 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 2850 8150 3000
 $EndSCHEMATC

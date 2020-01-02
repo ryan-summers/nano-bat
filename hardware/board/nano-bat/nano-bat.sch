@@ -19,9 +19,9 @@ U 1 1 5DDB7894
 P 3450 4600
 F 0 "J102" H 3507 5067 50  0000 C CNN
 F 1 "USB_B_Mini" H 3507 4976 50  0000 C CNN
-F 2 "footprints:USB-MICRO-B-HIROSE-UX60-MB-5S8" H 3600 4550 50  0001 C CNN
+F 2 "Connector_USB:USB_Mini-B_Lumberg_2486_01_Horizontal" H 3600 4550 50  0001 C CNN
 F 3 "~" H 3600 4550 50  0001 C CNN
-F 4 "H2960CT-ND" H 3450 4600 50  0001 C CNN "Part"
+F 4 "609-4701-1-ND" H 3450 4600 50  0001 C CNN "Part"
 	1    3450 4600
 	1    0    0    -1  
 $EndComp
@@ -3187,4 +3187,17 @@ F 4 "311-1.0KGRCT-ND" H 3500 2800 50  0001 C CNN "Part"
 $EndComp
 Text Notes 1350 2250 0    50   ~ 0
 When the barrel jack is powered, it will \noverride USB as the supply source and \nwill be used as the main system rail. If \nthe barrel-jack is not connected, USB\n power will be used.
+$Comp
+L Connector:TestPoint TP101
+U 1 1 5E31A2AF
+P 3150 2250
+F 0 "TP101" H 3208 2322 50  0000 L CNN
+F 1 "TestPoint" H 3208 2277 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 3350 2250 50  0001 C CNN
+F 3 "~" H 3350 2250 50  0001 C CNN
+	1    3150 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 2250 3150 2600
 $EndSCHEMATC

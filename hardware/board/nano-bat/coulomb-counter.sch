@@ -13,18 +13,6 @@ Comment2 "Initial draft release"
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Device:R_US R406
-U 1 1 5DDBBCC5
-P 5850 2950
-F 0 "R406" V 5645 2950 50  0000 C CNN
-F 1 "10" V 5736 2950 50  0000 C CNN
-F 2 "footprints:SM6227" V 5890 2940 50  0001 C CNN
-F 3 "~" H 5850 2950 50  0001 C CNN
-F 4 "SM6227FT10R0" V 5850 2950 50  0001 C CNN "Part"
-	1    5850 2950
-	0    1    1    0   
-$EndComp
 Text HLabel 4850 2250 0    50   Input ~ 0
 Vbatt_source
 Text HLabel 6900 2250 2    50   Input ~ 0
@@ -36,19 +24,7 @@ Wire Wire Line
 	5650 2950 5700 2950
 Connection ~ 6050 2950
 Wire Wire Line
-	6050 2250 6400 2250
-$Comp
-L Device:R_US R405
-U 1 1 5DDB5613
-P 5850 2500
-F 0 "R405" V 5645 2500 50  0000 C CNN
-F 1 "1.1" V 5736 2500 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 5890 2490 50  0001 C CNN
-F 3 "~" H 5850 2500 50  0001 C CNN
-F 4 "RNCP1206FTD1R00CT-ND" V 5850 2500 50  0001 C CNN "Part"
-	1    5850 2500
-	0    1    1    0   
-$EndComp
+	6050 2250 6200 2250
 $Comp
 L nano-bat:LTC2942 U401
 U 1 1 5DDB7152
@@ -67,18 +43,6 @@ Text HLabel 4050 3700 0    50   Input ~ 0
 SCL
 Text HLabel 4050 3800 0    50   Input ~ 0
 SDA
-$Comp
-L Device:R_US R404
-U 1 1 5DDBF8CD
-P 5850 2000
-F 0 "R404" V 5645 2000 50  0000 C CNN
-F 1 "100m" V 5736 2000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5890 1990 50  0001 C CNN
-F 3 "~" H 5850 2000 50  0001 C CNN
-F 4 "273-KDV06DR100ETCT-ND" V 5850 2000 50  0001 C CNN "Part"
-	1    5850 2000
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5700 2000 5550 2000
 Wire Wire Line
@@ -96,7 +60,7 @@ $Comp
 L Jumper:Jumper_3_Bridged12 JP401
 U 1 1 5DDC0EDA
 P 5550 2250
-F 0 "JP401" V 5550 2317 50  0000 L CNN
+F 0 "JP401" V 5450 2350 50  0000 L CNN
 F 1 "Jumper_3_Bridged12" V 5595 2317 50  0001 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical_SMD_Pin1Left" H 5550 2250 50  0001 C CNN
 F 3 "~" H 5550 2250 50  0001 C CNN
@@ -159,8 +123,6 @@ Wire Wire Line
 Wire Wire Line
 	4050 3800 4250 3800
 Connection ~ 4250 3800
-Wire Wire Line
-	5250 2950 5650 2950
 Wire Wire Line
 	5250 2950 5250 2250
 Connection ~ 5250 2250
@@ -2920,10 +2882,6 @@ A4 FF 44 D2 9B 92 E6 F5 79 18 C2 3D FD 7A 52 7D 1E 5A EC 4B FA A1 A4 7F 6D AD FD
 EndData
 $EndBitmap
 Wire Wire Line
-	5650 2950 5650 3250
-Wire Wire Line
-	6050 2950 6050 3250
-Wire Wire Line
 	4600 3000 4950 3000
 Wire Wire Line
 	4950 3000 4950 3100
@@ -2986,6 +2944,113 @@ F 4 "1276-1258-1-ND" H 5000 2450 50  0001 C CNN "Part"
 $EndComp
 Text Notes 4950 1650 0    50   ~ 0
 The sensitivity of the system may be selected by JP401.
+Wire Wire Line
+	6050 2950 6050 3200
+Wire Wire Line
+	5650 2950 5650 3200
+Wire Wire Line
+	5250 2950 5650 2950
+$Comp
+L Device:R_US R406
+U 1 1 5DDBBCC5
+P 5850 2950
+F 0 "R406" V 5645 2950 50  0000 C CNN
+F 1 "10" V 5736 2950 50  0000 C CNN
+F 2 "footprints:SM6227" V 5890 2940 50  0001 C CNN
+F 3 "~" H 5850 2950 50  0001 C CNN
+F 4 "SM6227FT10R0" V 5850 2950 50  0001 C CNN "Part"
+	1    5850 2950
+	0    1    1    0   
+$EndComp
 Text Notes 6700 2900 0    50   ~ 0
-Maximum Current Ranges:\n* 10 Ohms - 500mA\n* 1 Ohm - 50mA\n* 100 mOhm - 5mA
+Maximum Current Ranges:\n* 10 Ohms  - 5mA\n* 1 Ohm    - 50mA\n* 100mOhm - 500mA
+$Comp
+L Device:R_US R405
+U 1 1 5DDB5613
+P 5850 2500
+F 0 "R405" V 5645 2500 50  0000 C CNN
+F 1 "1.1" V 5736 2500 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5890 2490 50  0001 C CNN
+F 3 "~" H 5850 2500 50  0001 C CNN
+F 4 "RNCP1206FTD1R00CT-ND" V 5850 2500 50  0001 C CNN "Part"
+	1    5850 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R404
+U 1 1 5DDBF8CD
+P 5850 2000
+F 0 "R404" V 5645 2000 50  0000 C CNN
+F 1 "100m" V 5736 2000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5890 1990 50  0001 C CNN
+F 3 "~" H 5850 2000 50  0001 C CNN
+F 4 "273-KDV06DR100ETCT-ND" V 5850 2000 50  0001 C CNN "Part"
+	1    5850 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP404
+U 1 1 5E1E5CF9
+P 6200 3150
+F 0 "TP404" H 6258 3222 50  0000 L CNN
+F 1 "TestPoint" H 6258 3177 50  0001 L CNN
+F 2 "" H 6400 3150 50  0001 C CNN
+F 3 "~" H 6400 3150 50  0001 C CNN
+	1    6200 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP402
+U 1 1 5E1E6532
+P 5450 3150
+F 0 "TP402" H 5508 3222 50  0000 L CNN
+F 1 "TestPoint" H 5508 3177 50  0001 L CNN
+F 2 "" H 5650 3150 50  0001 C CNN
+F 3 "~" H 5650 3150 50  0001 C CNN
+	1    5450 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3150 5450 3200
+Wire Wire Line
+	5450 3200 5650 3200
+Connection ~ 5650 3200
+Wire Wire Line
+	5650 3200 5650 3250
+Wire Wire Line
+	6200 3150 6200 3200
+Wire Wire Line
+	6200 3200 6050 3200
+Connection ~ 6050 3200
+Wire Wire Line
+	6050 3200 6050 3250
+$Comp
+L Connector:TestPoint TP401
+U 1 1 5E1E78CD
+P 5250 2150
+F 0 "TP401" H 5308 2222 50  0000 L CNN
+F 1 "TestPoint" H 5308 2177 50  0001 L CNN
+F 2 "" H 5450 2150 50  0001 C CNN
+F 3 "~" H 5450 2150 50  0001 C CNN
+	1    5250 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2150 5250 2250
+$Comp
+L Connector:TestPoint TP403
+U 1 1 5E1E85DA
+P 6200 2150
+F 0 "TP403" H 6258 2222 50  0000 L CNN
+F 1 "TestPoint" H 6258 2177 50  0001 L CNN
+F 2 "" H 6400 2150 50  0001 C CNN
+F 3 "~" H 6400 2150 50  0001 C CNN
+	1    6200 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 2150 6200 2250
+Connection ~ 6200 2250
+Wire Wire Line
+	6200 2250 6400 2250
 $EndSCHEMATC
