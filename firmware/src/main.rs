@@ -3,16 +3,17 @@
 
 use cortex_m;
 use cortex_m_rt::entry;
-use cortex_m_rt;
 use stm32l4xx_hal as hal;
-use ili9341;
+use ili9341::{
+    Ili9341,
+    Orientation,
+};
 use embedded_graphics::{
-        prelude::*,
-        primitives::Line,
-        style::PrimitiveStyle,
-        pixelcolor::Rgb565,
+    prelude::*,
+    image::Image,
 };
 use hal::delay::Delay;
+use tinybmp::Bmp;
 
 use embedded_hal::spi::{Mode, Polarity, Phase};
 
@@ -34,15 +35,21 @@ fn main() -> ! {
     let mut rcc = dp.RCC.constrain();
 
     // Configure system clocks.
-    let clocks = rcc.cfgr.hclk(8.mhz()).freeze(&mut flash.acr);
+    let clocks = rcc.cfgr.hclk(32.mhz())
+        .sysclk(64.mhz())
+        .pclk2(32.mhz())
+        .freeze(&mut flash.acr);
 
     // Constrain the reset and clock control system. We need to use this to configure the APB/AHB
     // bus for GPIOB.
     let mut gpiob = dp.GPIOB.split(&mut rcc.ahb2);
     let mut led = gpiob.pb2.into_open_drain_output(&mut gpiob.moder, &mut gpiob.otyper);
     let mut bl_control = gpiob.pb0.into_push_pull_output(&mut gpiob.moder, &mut gpiob.otyper);
-
     bl_control.set_high().unwrap();
+
+    let mut pwm = dp.TIM2.pwm((bl_control), 200.khz(), clocks, &mut rcc.apb1r1).0;
+    pwm.set_duty(pwm.get_max_duty() / 2 as u32);
+
 
     // Configure SPI for the TFT-LCD display.
     let tft_spi_sck = gpiob.pb13.into_af5(&mut gpiob.moder, &mut gpiob.afrh);
@@ -56,7 +63,7 @@ fn main() -> ! {
             phase: Phase::CaptureOnFirstTransition,
             polarity: Polarity::IdleLow,
         },
-        100.khz(),
+        16.mhz(),
         clocks,
         &mut rcc.apb1r1,
     );
@@ -69,16 +76,17 @@ fn main() -> ! {
     let tft_d_cx_n = gpiob.pb10.into_push_pull_output(&mut gpiob.moder, &mut gpiob.otyper);
     let tft_rst = gpiob.pb11.into_push_pull_output(&mut gpiob.moder, &mut gpiob.otyper);
 
-    let mut display = ili9341::Ili9341::new_spi(
+    let mut display = Ili9341::new_spi(
             tft_spi,
             tft_cs_n,
             tft_d_cx_n,
             tft_rst,
             &mut timer).unwrap();
 
-    Line::new(Point::new(10, 10), Point::new(20, 20))
-        .into_styled(PrimitiveStyle::with_stroke(Rgb565::RED, 1))
-        .draw(&mut display).unwrap();
+    display.set_orientation(Orientation::Portrait).unwrap();
+
+    let bmp = Bmp::from_slice(include_bytes!("assets/vertigo-logo.bmp")).unwrap();
+    Image::new(&bmp, Point::new(30, 70)).draw(&mut display).unwrap();
 
     loop {
         timer.delay_ms(100 as u32);
