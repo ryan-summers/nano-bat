@@ -9,13 +9,17 @@ version = "0.1.0"
 cortex-m = "0.6.0"
 cortex-m-semihosting = "0.3.3"
 panic-halt = "0.2.0"
+embedded-graphics = "0.6.0-beta"
+ili9341 = "0.3.0-beta"
+embedded-hal = "0.2.3"
 
 [dependencies.cortex-m-rt]
 version = "0.6.10"
 
 [dependencies.stm32l4xx-hal]
 version = "0.5.0"
-features = ["stm32l4x2", "rt"]
+features = ["stm32l4x2", "stm32l452", "rt"]
+path = "../stm32l4xx-hal"
 
 [dependencies.stm32l4]
 version = "0.10.0"
