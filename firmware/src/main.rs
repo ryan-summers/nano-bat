@@ -47,10 +47,6 @@ fn main() -> ! {
     let mut bl_control = gpiob.pb0.into_push_pull_output(&mut gpiob.moder, &mut gpiob.otyper);
     bl_control.set_high().unwrap();
 
-    let mut pwm = dp.TIM2.pwm((bl_control), 200.khz(), clocks, &mut rcc.apb1r1).0;
-    pwm.set_duty(pwm.get_max_duty() / 2 as u32);
-
-
     // Configure SPI for the TFT-LCD display.
     let tft_spi_sck = gpiob.pb13.into_af5(&mut gpiob.moder, &mut gpiob.afrh);
     let tft_spi_miso = gpiob.pb14.into_af5(&mut gpiob.moder, &mut gpiob.afrh);
