@@ -14,6 +14,7 @@ use embedded_graphics::{
 };
 use hal::delay::Delay;
 use tinybmp::Bmp;
+use ltc2942;
 
 use embedded_hal::spi::{Mode, Polarity, Phase};
 
@@ -39,6 +40,32 @@ fn main() -> ! {
         .sysclk(64.mhz())
         .pclk2(32.mhz())
         .freeze(&mut flash.acr);
+
+    // Configure the battery monitor.
+    let mut gpioa = dp.GPIOA.split(&mut rcc.ahb2);
+    let cc_alcc = gpioa.pa8.into_floating_input(&mut gpioa.moder, &mut gpioa.pupdr);
+    let cc_scl = {
+        let mut scl = gpioa.pa9.into_open_drain_output(&mut gpioa.moder, &mut gpioa.otyper);
+        scl.internal_pull_up(&mut gpioa.pupdr, false);
+        scl.into_af4(&mut gpioa.moder, &mut gpioa.afrh)
+    };
+    let cc_sda = {
+        let mut sda = gpioa.pa10.into_open_drain_output(&mut gpioa.moder, &mut gpioa.otyper);
+        sda.internal_pull_up(&mut gpioa.pupdr, false);
+        sda.into_af4(&mut gpioa.moder, &mut gpioa.afrh)
+    };
+
+    let cc_i2c = hal::i2c::I2c::i2c1(
+        dp.I2C1,
+        (cc_scl, cc_sda),
+        100.khz(),
+        clocks,
+        &mut rcc.apb1r1,
+    );
+
+    let mut batt_mon = ltc2942::Ltc2942::new(cc_i2c, cc_alcc).unwrap();
+
+    batt_mon.set_sense_resistance(1f32).unwrap();
 
     // Constrain the reset and clock control system. We need to use this to configure the APB/AHB
     // bus for GPIOB.

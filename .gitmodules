@@ -1,3 +1,0 @@
-[submodule "stm32l4xx-hal"]
-	path = stm32l4xx-hal
-	url = git@github.com:vertigo-designs/stm32l4xx-hal.git
